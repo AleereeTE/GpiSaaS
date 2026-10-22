@@ -1,1 +1,97 @@
-{"taches": [], "projets": [], "membres": [], "idees": []} 
+{
+  "membres": [
+    { "id": "m1", "nom": "Inès Morel" },
+    { "id": "m2", "nom": "Hugo Lefèvre" },
+    { "id": "m3", "nom": "Sarah Benali" }
+  ],
+  "projets": [
+    { "id": "p1", "nom": "GpiSaaS — Front web" },
+    { "id": "p2", "nom": "GpiSaaS — API" }
+  ],
+  "taches": [
+    {
+      "id": "t1",
+      "titre": "Maquette Kanban",
+      "description": "Maquetter le tableau Kanban : une colonne par statut, glisser-déposer entre colonnes.",
+      "statut": "EN_COURS",
+      "projetId": "p1",
+      "membreId": "m1",
+      "echeance": "2026-10-30",
+      "sousTaches": [
+        { "id": "st1", "titre": "Colonnes par statut", "faite": true },
+        { "id": "st2", "titre": "Version mobile (liste)", "faite": false }
+      ],
+      "commentaires": [
+        { "id": "c1", "auteurId": "m2", "texte": "Pense à la vue mobile, les colonnes ne tiennent pas.", "date": "2026-10-20T09:12:00Z" }
+      ]
+    },
+    {
+      "id": "t2",
+      "titre": "API des tâches",
+      "description": "Exposer le CRUD des tâches : liste filtrée, détail, création, modification.",
+      "statut": "EN_REVUE",
+      "projetId": "p2",
+      "membreId": "m2",
+      "echeance": "2026-10-25",
+      "sousTaches": [
+        { "id": "st3", "titre": "GET /taches", "faite": true },
+        { "id": "st4", "titre": "POST /taches", "faite": true },
+        { "id": "st5", "titre": "PATCH /taches/:id", "faite": false }
+      ],
+      "commentaires": []
+    },
+    {
+      "id": "t3",
+      "titre": "Tests e2e",
+      "description": "Couvrir le parcours principal : liste, filtres, fiche tâche.",
+      "statut": "A_FAIRE",
+      "projetId": "p1",
+      "membreId": "m3",
+      "echeance": "2026-11-10",
+      "sousTaches": [],
+      "commentaires": []
+    },
+    {
+      "id": "t4",
+      "titre": "Barre de filtres",
+      "description": "Filtrer la liste par projet, statut et membre, avec une recherche texte.",
+      "statut": "TERMINEE",
+      "projetId": "p1",
+      "membreId": "m1",
+      "echeance": "2026-10-21",
+      "sousTaches": [
+        { "id": "st6", "titre": "useReducer des filtres", "faite": true },
+        { "id": "st7", "titre": "Recherche debouncée", "faite": true }
+      ],
+      "commentaires": [
+        { "id": "c2", "auteurId": "m3", "texte": "Testé, la recherche n'envoie plus une requête par lettre.", "date": "2026-10-21T14:30:00Z" }
+      ]
+    },
+    {
+      "id": "t5",
+      "titre": "Modèle de données Prisma",
+      "description": "Tache, Projet, Membre, Idee : relations et contraintes.",
+      "statut": "EN_COURS",
+      "projetId": "p2",
+      "membreId": null,
+      "echeance": null,
+      "sousTaches": [],
+      "commentaires": []
+    },
+    {
+      "id": "t6",
+      "titre": "Fiche tâche",
+      "description": "Afficher membre, échéance, sous-tâches et commentaires d'une tâche.",
+      "statut": "A_FAIRE",
+      "projetId": "p1",
+      "membreId": "m2",
+      "echeance": "2026-11-03",
+      "sousTaches": [],
+      "commentaires": []
+    }
+  ],
+  "idees": [
+    { "id": "i1", "texte": "Mode sombre", "destination": "NON_TRIEE" },
+    { "id": "i2", "texte": "Notifications par mail à l'échéance", "destination": "NON_TRIEE" }
+  ]
+}
