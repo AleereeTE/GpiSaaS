@@ -1,7 +1,7 @@
 import { Link, useParams } from 'react-router';
 
 export function FicheTachePage() {
-  const { id } = useParams(); // récupère le ":id" de l'URL
+  const { id } = useParams(); 
   return (
     <section>
       <Link to="/taches">← Retour à la liste</Link>
